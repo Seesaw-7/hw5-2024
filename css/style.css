@@ -83,3 +83,59 @@ header {
     align-items: stretch; /* Centers items on the cross axis */
     gap: 10px; /* Ensures there's a 10px gap between items */
   }
+
+
+  @media (min-width: 900px) {
+    /* Styles for the pricing section */
+    .pricing {
+      display: flex;
+      flex-direction: row;
+      justify-content: center; /* Centers the cards horizontally */
+      align-items: center; /* Allows cards to have different heights */
+      flex-wrap: wrap; /* Allows cards to wrap as needed */
+      gap: 20px; /* Adds space between the cards */
+    }
+  
+    /* Styles for individual cards */
+    .card {
+      flex: 0 1 275px; /* Cards can shrink but not grow, with an initial width of 275px */
+      display: flex; /* Activates Flexbox for card content */
+      flex-direction: column; /* Stacks content vertically */
+      align-items: center; /* Centers content horizontally */
+      margin: 10px; /* Adds margin around cards for spacing */
+      /* Add any additional styling for background, border, padding, etc. here */
+    }
+  }
+
+  
+  @media (min-width: 900px) {
+    header {
+      display: flex;
+      justify-content: space-between; /* Pushes the logo to the left and nav_links to the right */
+      align-items: center; /* Vertically centers items in the header */
+      padding: 0 20px; /* Optional: Adds padding on the left and right */
+      flex-direction: row;
+    }
+  
+    .nav_links {
+      display: flex;
+      justify-content: flex-end; /* Aligns the nav items to the right */
+      flex-direction: row;
+      /* The nav_links container will fill the available space, pushing the links to the end */
+    }
+  
+    body > header:not(main header) {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        z-index: 10; /* A z-index that is high enough to keep it above other content */
+        background-color: #ffffff; /* Use the actual background color of your header */
+        /* Additional styles like box-shadow for aesthetics if needed */
+      }
+
+      body {
+        padding-top: 80px; /* Replace [HeaderHeight] with the actual height of the fixed header */
+      }
+  }
+  
