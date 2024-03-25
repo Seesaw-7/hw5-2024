@@ -1,0 +1,85 @@
+@keyframes logoGrowFadeIn {
+    from {
+        width: 25px;
+        opacity: 0;
+    }
+
+    to {
+        width: 475px;
+        opacity: 1;
+    }
+}
+
+#logo {
+    animation: logoGrowFadeIn 5s ease-in-out forwards;
+}
+
+body {
+    font-family: 'Poppins', serif;
+    background-image: url('images/concrete_seamless.png');
+    background-color: #f1f1f1;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+header {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+}
+
+.nav_links {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    list-style: none;
+}
+
+.nav_links .nav_item {
+    padding: 8px 0;
+}
+
+.nav_links .nav_item a:link,
+.nav_links .nav_item a:visited {
+    color: blue;
+}
+
+.card>header {
+    background: #288088;
+    border: 2px solid #45ADAD;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    border-top-left-radius: 50px;
+    border-top-right-radius: 50px;
+}
+
+.card {
+    flex-basis: 450px;
+}
+
+.pricing {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 100%;
+}
+
+.gallery img {
+    border: 10px solid #50C7C7; /* Solid border with specified color */
+    margin: 10px; /* Margin on all sides */
+    width: 300px; /* Fixed width */
+    /* Assuming you want the height to be auto to maintain aspect ratio */
+    height: auto;
+  }
+
+  .gallery {
+    display: flex; /* Enables Flexbox */
+    flex-wrap: wrap; /* Allows items to wrap to the next line */
+    justify-content: center; /* Centers items on the main axis */
+    align-items: stretch; /* Centers items on the cross axis */
+    gap: 10px; /* Ensures there's a 10px gap between items */
+  }
