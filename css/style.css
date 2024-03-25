@@ -69,73 +69,74 @@ header {
 }
 
 .gallery img {
-    border: 10px solid #50C7C7; /* Solid border with specified color */
-    margin: 10px; /* Margin on all sides */
-    width: 300px; /* Fixed width */
-    /* Assuming you want the height to be auto to maintain aspect ratio */
+    border: 10px solid #50C7C7;
+    margin: 10px;
+    width: 300px;
     height: auto;
-  }
+}
 
-  .gallery {
-    display: flex; /* Enables Flexbox */
-    flex-wrap: wrap; /* Allows items to wrap to the next line */
-    justify-content: center; /* Centers items on the main axis */
-    align-items: stretch; /* Centers items on the cross axis */
-    gap: 10px; /* Ensures there's a 10px gap between items */
-  }
+.gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: stretch;
+    gap: 10px;
+}
 
 
-  @media (min-width: 900px) {
-    /* Styles for the pricing section */
+@media (min-width: 900px) {
     .pricing {
-      display: flex;
-      flex-direction: row;
-      justify-content: center; /* Centers the cards horizontally */
-      align-items: center; /* Allows cards to have different heights */
-      flex-wrap: wrap; /* Allows cards to wrap as needed */
-      gap: 20px; /* Adds space between the cards */
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: 20px;
     }
-  
-    /* Styles for individual cards */
-    .card {
-      flex: 0 1 275px; /* Cards can shrink but not grow, with an initial width of 275px */
-      display: flex; /* Activates Flexbox for card content */
-      flex-direction: column; /* Stacks content vertically */
-      align-items: center; /* Centers content horizontally */
-      margin: 10px; /* Adds margin around cards for spacing */
-      /* Add any additional styling for background, border, padding, etc. here */
-    }
-  }
 
-  
-  @media (min-width: 900px) {
+    .card {
+        flex: 0 1 275px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin: 10px;
+    }
+}
+
+
+@media (min-width: 900px) {
     header {
-      display: flex;
-      justify-content: space-between; /* Pushes the logo to the left and nav_links to the right */
-      align-items: center; /* Vertically centers items in the header */
-      padding: 0 20px; /* Optional: Adds padding on the left and right */
-      flex-direction: row;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0 20px;
+        flex-direction: row;
     }
-  
+
     .nav_links {
-      display: flex;
-      justify-content: flex-end; /* Aligns the nav items to the right */
-      flex-direction: row;
-      /* The nav_links container will fill the available space, pushing the links to the end */
+        display: flex;
+        justify-content: flex-end;
+        flex-direction: row;
     }
-  
-    body > header:not(main header) {
+
+    body>header:not(main header) {
         position: fixed;
         top: 0;
         left: 0;
         width: 100%;
-        z-index: 10; /* A z-index that is high enough to keep it above other content */
-        background-color: #ffffff; /* Use the actual background color of your header */
-        /* Additional styles like box-shadow for aesthetics if needed */
-      }
+        z-index: 10;
+        background-color: #ffffff;
+    }
 
-      body {
-        padding-top: 80px; /* Replace [HeaderHeight] with the actual height of the fixed header */
-      }
-  }
-  
+    body {
+        padding-top: 80px;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    #logo {
+        animation: none;
+        width: 475px;
+        opacity: 1;
+    }
+}
